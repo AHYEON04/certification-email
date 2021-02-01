@@ -40,7 +40,13 @@ app.post('/message', twilio.webhook(), (req, res) => {
       res.set('Content-Type', 'text/xml');
       res.send(response.toString());
     });
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require('twilio')(accountSid, authToken);
     
+client.messages('본인인증 확인')
+        .fetch()
+        .then(message => console.log(message.to));
 
 app.listen(PORT, () => {
   console.log(PORT, '번 포트에서 대기 중');
