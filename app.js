@@ -15,38 +15,8 @@ sequelize.sync({ force: false })
     .catch((err) => {
         console.error(err);
     });
-app.use(bodyParser.urlencoded({ extended: false }));
-    
-app.post('/voice', twilio.webhook(), (req, res) => {
-    // Twilio Voice URL - receives incoming calls from Twilio
-    const response = new VoiceResponse();
-    
-    response.say(
-        `Thanks for calling!
-         Your phone number is ${req.body.From}. I got your call because of Twilio´s
-         webhook. Goodbye!`
-    );
-    
-      res.set('Content-Type', 'text/xml');
-      res.send(response.toString());
-    });
-    
-app.post('/message', twilio.webhook(), (req, res) => {
-    // Twilio Messaging URL - receives incoming messages from Twilio
-    const response = new MessagingResponse();
-    
-    response.message(`Your text to me was ${req.body.Body.length} characters long.Webhooks are neat :)`);
-    
-      res.set('Content-Type', 'text/xml');
-      res.send(response.toString());
-    });
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const client = require('twilio')(accountSid, authToken);
-    
-client.messages('본인인증 확인')
-        .fetch()
-        .then(message => console.log(message.to));
+
+app.use("/", routes);
 
 app.listen(PORT, () => {
   console.log(PORT, '번 포트에서 대기 중');
