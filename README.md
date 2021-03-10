@@ -1,3 +1,3 @@
-# cellphone-Certification
-twilio의 Send SMS 이용 (https://www.twilio.com/docs/sms) 하여 휴대폰인증하기 
+# certification-email
+email 인증 회원가입 api
 
