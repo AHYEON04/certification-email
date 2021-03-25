@@ -1,3 +1,4 @@
 # certification-email
-email 인증 회원가입 api
+email인증을 이용한 회원가입 api  
+
 
