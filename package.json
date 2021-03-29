@@ -1,0 +1,22 @@
+{
+  "name": "certification-email",
+  "version": "1.0.0",
+  "description": "email인증을 이용한 회원가입 api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AHYEON04/certification-email.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AHYEON04/certification-email/issues"
+  },
+  "homepage": "https://github.com/AHYEON04/certification-email#readme",
+  "dependencies": {
+    "nodemailer": "^6.5.0"
+  }
+}
