@@ -1,7 +1,7 @@
 {
-  "name": "certification-email",
+  "name": "express-SNS",
   "version": "1.0.0",
-  "description": "email인증을 이용한 회원가입 api",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
