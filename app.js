@@ -11,7 +11,7 @@ const pageRouter = require('./routes/page');
 const { nextTick } = require('process');
 
 const app = express();
-app.set('port', process.env.PROT||3000);
+app.set('port', process.env.PROT||8000);
 app.set('view engine', 'html');
 nunjucks.configure('views',{
     express: app,
