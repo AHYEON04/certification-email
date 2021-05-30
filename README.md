@@ -1,3 +1,3 @@
-# express-Sns
+# express-SNS
 
-- express로 구현한 sns
+- express로 구현한 SNS
