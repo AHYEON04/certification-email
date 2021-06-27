@@ -42,7 +42,7 @@ router.post('/login', isNotLoggedIn, (req, res, next) => {
       }
       return res.redirect('/');
     });
-  })(req, res, next); 에는 (req, res, next)
+  })(req, res, next); 
 });
 
 router.get('/logout', isLoggedIn, (req, res) => {
